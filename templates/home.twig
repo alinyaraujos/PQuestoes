@@ -1,0 +1,72 @@
+{% extends "layout.twig" %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/freelancer.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/freelancer.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/cssTela.css">
+<style>
+
+</style>
+
+{% endblock %}
+
+{% block title %}
+Página Inicial
+{% endblock %}
+
+{% block conteudo %}
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="{{base_url()}}/assets/questao/img/logo2.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">Transformar arquivo em questionário</span>
+                        <hr class="star-light">
+                        <span class="skills">Word/PDF</span><br><br>
+
+                         <form name="form" method="post" enctype="multipart/form-data" action="/questoes/add" > 
+                            <label>Nome do assunto:
+                                <input type="text" name="assunto" class="but" required="" style="color:#000000"> 
+                            </label> 
+                            <br>
+                            <label> 
+                                <input type="file" name="arquivo" class="but" >
+                            </label><br>
+                            Obs: Melhor funcionamento com arquivos do word
+                            <br>
+                            <center> <button type="submit" class="btn btn-primary">Transformar</button>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        UFAL CAMPUS ARAPIRACA - 2k16
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

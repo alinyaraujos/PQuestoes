@@ -1,0 +1,53 @@
+{% extends "layout.twig" %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/freelancer.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/freelancer.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/cssTela.css">
+
+{% endblock %}
+
+{% block title %}
+Perguntas
+{% endblock %}
+
+{% block conteudo %}
+<br><br><br><br><br><br><br> 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2>Perguntas</h2>
+            <hr class="star-primary">
+        </div>
+    </div>
+    <div>
+    <!--Fomulario das questoes a serem corrigidas-->
+        <form action="/corrigir" name="form" method="post" >
+            <input type="hidden" name="nomeArquivo" value="{{idArquivo}}" >
+            {% for key,item in questoes %}
+                {{key+1}}. {{item[0]}}<br><br>
+
+                    {% for item2 in item[1] %}
+                        <input type="radio" name="q{{key+1}}" value="{{item2[0]}}">{{item2[1]}}<br>
+                    {% endfor %}
+                    <br>
+
+
+            {% endfor %}
+
+                    <center> <button type="submit" class="btn btn-primary">Corrigir</button>
+                        </center>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+

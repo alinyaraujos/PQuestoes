@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/freelancer.css">
+	<link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/freelancer.css">
+
+
+	{% block styles %}{% endblock %}
+	<title>Questões - {% block title %}{% endblock %}</title>
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../#page-top">Volte para o início</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="../../#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/questaoCadastrada">Arquivos</a>
+                    </li>
+                    <!-- <li class="page-scroll">
+                        <a href="../../#about">Sobre</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../../#contact">Contato</a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+     
+
+	{% block conteudo %}{% endblock %}
+	
+	
+
+
+
+	<script src="{{base_url()}}/assets/site/js/jquery.min.js"></script>
+	<script src="{{base_url()}}/assets/site/js/bootstrap.min.js"></script>
+	<script src="{{base_url()}}/assets/site/js/jquery.fittext.js"></script>
+	{% block scripts %}{% endblock %}
+</body>
+</html>

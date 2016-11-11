@@ -1,0 +1,63 @@
+{% extends "layout.twig" %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/freelancer.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/freelancer.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}/assets/questao/css/cssTela.css">
+<style>
+
+</style>
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block conteudo %}
+<br><br><br><br><br><br><br> 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2>Gabarito</h2>
+            <hr class="star-primary">
+        </div>
+ 
+            <div id="login-box">
+            <div id="login-box-interno">
+                
+                <form name="resultado" action="">
+                    <div id="login-box-texto">Resultado</div>
+                    <br>
+                <table border="1" align="center">
+                    <tr><td>Você acertou: </td> <td> {{acertou}} questões</td>  </tr>
+                    <tr><td>Você errou: </td> <td> {{erro}} questões  </td> </tr>
+                    <tr><td>Porcentagem: </td> <td>{{porcentagem}}% </td>  </tr>
+                    <tr><td>Erro: 
+                        {% for item in erradas %}
+                            {{item.erradas}}
+                        {% endfor %}
+
+                   </td> <td> </td>  </tr>
+                </table><br>
+
+                    <center>  <center> <a href="/questaoCadastrada" class="btn btn-primary"> OK </a></center>
+
+                </form>
+
+            </div>
+        </div>
+   </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+
+
+
+{% endblock %}
+

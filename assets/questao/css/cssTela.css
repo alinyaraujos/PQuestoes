@@ -1,0 +1,92 @@
+		#login-box{
+            width: 600px;
+            height: 370px;
+            margin: 150px auto 0px;
+            border-radius: 5px;
+        }
+
+        #login-box-interno{
+   
+            width: 560px;
+            height: 320px;
+            background-color:#fdfdfd;
+            position: absolute;
+            margin: 25px 0px 30px 20px;
+            border-radius: 5px;
+            box-shadow: -1px 4px 40px black;
+            background: #ffffff right no-repeat;
+        }
+
+        #login-box-texto{
+            background-color: #CFCFCF;
+            height: 45px;
+            text-align: center;
+            font: bold 14px/45px sans-serif;
+            border-bottom: 1px solid #9C9C9C;
+            color: #1C1C1C;
+            text-shadow: 1px 0px 1px white;
+        }
+
+        .input-div{
+            margin: 15px 0px -10px 15px;
+            padding: 3px;
+        }
+
+        .input-div input{
+            
+            width: 320px;
+            height: 30px;
+            padding-left: 5px;
+            font: normal 14px sans-serif;
+            color: black;
+            border-radius: 3px;
+            border: 1px solid #bfc4c6;
+        }
+
+        .input-div:hover input{
+		
+            border-color: #7dc6dd;
+        }
+
+        #form1{
+            
+            width:320px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        #botao{
+            
+            float: right;
+            background-color: #a3e7f8;
+            padding: 5px 15px;
+            font: bold 14px sans-serif;
+            border-radius: 20px;
+            text-shadow: 0px 0.5px white;
+            border: 1px solid #9eb9c3;
+        }
+
+		#senha{
+            text-decoration: underline;
+            font-size: 12px;
+        }
+
+		#cadastro{
+            font-size: 20px;
+            font-style: italic;
+            color: #606060;
+            text-align: center;
+        }
+		
+        #lembrar-senha{
+            margin-top: -15px;
+        }
+
+		a {
+        text-decoration: none;
+        color: #606060;
+		}
+
+		a:hover {
+        text-decoration: underline;
+        color: #000000;
+		}
