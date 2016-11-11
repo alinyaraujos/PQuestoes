@@ -1,7 +1,5 @@
 # PQuestoes
 Transformar para fixar 
-# Starthought
-
 <strong>
 
 Essa ferramenta em desenvolvimento pretende auxiliar os alunos a transformarem seus arquivos extras de questões disponível nos formatos <i>docx, doc e pdf</i>, em formulários eletrônicos. Desse modo,  que estudantes terão uma maior flexibilidade e comodidade na hora de responder os questionário.
