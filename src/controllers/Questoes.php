@@ -72,5 +72,63 @@ class Questoes
 			}	
 				return $response->withRedirect("/questaoCadastrada");	
 	}
+
+	public function exibirFormulario($request, $response, $args){
+		$busca= DB::findAll("cadastro","id_arquivos = ?", 
+			array(
+				$_POST["idNome"]
+			)
+		);
+
+		$buscaNome= DB::findOne("arquivos","id= ?", 
+			array(
+				$_POST["idNome"]
+			)
+		);
+
+		$info=explode('.',$buscaNome->nome);
+
+		$i=0;
+		$soma=0;
+		$arrayQuestoes=array();
+		$letra= array('a','b','c','d','e');
+
+	
+	foreach ($busca as $valor) {
+	
+		if(preg_match('/[a-e]\)/', $valor->pergunta)){
+			
+			if($info[1]=='pdf'){
+				$result = preg_split('/[a-e]\)|[a-e]\-|[a-e]\s\-|[a-e]\s\)/', $valor->pergunta);
+			}else{
+				$result = preg_split('/[a-e]\)|[a-e]\-/', $valor->pergunta);
+			}
+			$quantidade=count($result); 
+			$j=0;
+			foreach ($result as $value) {
+				if($j==0){
+					array_push($arrayQuestoes,
+						array(
+						$value	
+						)
+
+					);
+				}else{
+					$arrayQuestoes[$i-1][1][$j]= [$letra[$j-1], $value];
+				}
+
+				$j++;
+			}
+		}
+		$i++;
+	}
+
+	return $this->app->view->render($response, 
+			'formulario.twig', array(
+			'questoes'=>$arrayQuestoes,
+			'idArquivo'=> $_POST["idNome"]
+		));
+			
+	}
 			
 }	
